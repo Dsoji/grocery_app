@@ -1,4 +1,18 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(command -v clerk)",
+      "Bash(clerk --version)",
+      "Bash(echo \"---exit:$?---\")",
+      "Bash(npm install *)",
+      "Bash(clerk auth *)",
+      "Bash(clerk init *)",
+      "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\('version:',p.version\\); console.log\\('peerDeps:',JSON.stringify\\(p.peerDependencies,null,2\\)\\); console.log\\('exports:',Object.keys\\(p.exports||{}\\).join\\(', '\\)\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(clerk --help)",
+      "Bash(clerk whoami *)"
+    ]
+  },
   "enabledPlugins": {
     "expo@claude-plugins-official": true
   }
